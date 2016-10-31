@@ -28,3 +28,6 @@ node_modules
 
 # Debug
 debug.js
+
+#netbeans Project
+/nbproject
