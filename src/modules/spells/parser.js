@@ -1,4 +1,6 @@
-var Spells = moduleManager.loadObject('spells');
+
+var better = require('../../libs/better');
+var Spell = moduleManager.loadObject('spell');
 
 /**
  * Spells Parser

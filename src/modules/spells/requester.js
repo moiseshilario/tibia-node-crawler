@@ -2,15 +2,15 @@
  * Spells Requester
  */
 
-module.exports = function(foo, callback){
+module.exports = function(spell, callback){
   var SpellsRequester;
 
   SpellsRequester = new Requester()
     .setName('Spells')
-    .setPath('community/')
+    .setPath('library/')
     .setData('subtopic', 'spells')
-    .setData('foo', foo)
-    .setParser(moduleManager.loadParser('spells'))
+    .setData('spell', spell)
+    .setParser(moduleManager.loadParser('spell'))
     .setCallback(callback)
     .request();
 };
