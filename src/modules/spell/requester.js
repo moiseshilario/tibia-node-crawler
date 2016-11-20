@@ -3,10 +3,10 @@
  */
 
 module.exports = function(spell, callback){
-  var SpellsRequester;
+  var SpellRequester;
 
-  SpellsRequester = new Requester()
-    .setName('Spells')
+  SpellRequester = new Requester()
+    .setName('Spell')
     .setPath('library/')
     .setData('subtopic', 'spells')
     .setData('spell', spell)
