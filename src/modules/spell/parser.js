@@ -14,7 +14,7 @@ module.exports = function(body){
 
   SpellParser = new Parser(body)
 
-    .setData(new Spells())
+    .setData(new Spell())
 
     .setParser(function(){
       var self = this;
@@ -50,9 +50,30 @@ module.exports = function(body){
             break;
           }
 
-          self.data.spell[key] = value;
-        });
-    });
+      self.data.spell[key] = value;
+  });
+
+
+    wrap('Rune Information')
+      .find('tr')
+      .each(function() {
+        var td = $(this).find('td');
+        var key = better.key($(td[0]).text());
+        var value = better.value($(td[1]).text());
+
+        switch(key) {
+          case 'expLvl':
+            value = better.int(value);
+          break;
+          case 'magLvl':
+            value = better.int(value);
+          break;
+        }
+
+        self.data.rune[key] = value;
+      });
+
+      });
 
   return SpellParser;
 };
