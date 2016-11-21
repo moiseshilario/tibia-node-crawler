@@ -11,9 +11,9 @@
 var tibia = require('../index.js');
 
 
-tibia.spell('berserk', function(data){
+tibia.creature('bear', function(data){
 //  console.log(data.spell);
-//  console.log(data.rune);
+//  console.log(data.creature);
 
   //etc
   console.log(data);
