@@ -37,9 +37,9 @@ tibia.character('Hallsiny', function(data){
 * [highscores()](#highscores)
   * [Highscores Object](#highscores-object)
 * [spell()](#spell)
-  * [Character Object](#spell-object)
+  * [Spell Object](#spell-object)
 * [creature()](#creature)
-  * [Character Object](#creature-object)
+  * [Creature Object](#creature-object)
 
 
 ### **character()**
