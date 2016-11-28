@@ -36,6 +36,11 @@ tibia.character('Hallsiny', function(data){
   * [World Object](#world-object)
 * [highscores()](#highscores)
   * [Highscores Object](#highscores-object)
+* [spell()](#spell)
+  * [Character Object](#spell-object)
+* [creature()](#creature)
+  * [Character Object](#creature-object)
+
 
 ### **character()**
 ```js
@@ -188,6 +193,74 @@ tibia.highscores('Fidera', 'magic', 11, function(data){
 	console.log(data.getByRank(300).name);
 }
 ```
+### **spell()**
+```js
+tibia.spell(name, callback)
+```
+#### Callback
+```js
+callback = function(data){}
+```
+`data` is a instance of **Spell Object**.
+
+#### Spell Object
+
+##### Properties
+
+`data.spell` 
+> Object with spell info like name, price, mana, vocation, cooldown, etc.
+
+`data.rune`
+> Object with rune info like name, exp level, magic level, etc.
+
+##### Methods
+> No methods
+
+#### Example
+
+```js
+tibia.spell('annihilation', function(data){
+            console.log(data.spell.name); //Annihilation
+            //console.log(data.spell.mana); //300
+            //console.log(data.spell.price); //20000
+        });
+
+
+
+### **creature()**
+```js
+tibia.creature(name, callback)
+```
+#### Callback
+```js
+callback = function(data){}
+```
+`data` is a instance of **Creature Object**.
+
+#### Creature Object
+
+##### Properties
+
+`data.description` 
+> String with creature full description.
+
+`data.exp`
+> String with creature experience.
+
+`data.hitPoints`
+> String with creature hitpoints.
+
+##### Methods
+> No methods
+
+#### Example
+
+```js
+ tibia.creature('demon', function(data){
+            console.log("\n\n======TEST CREATURE========== ");
+            console.log(data.exp); //6000
+        });
+
 
 ## Contributing
 
