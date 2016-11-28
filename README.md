@@ -224,7 +224,7 @@ tibia.spell('annihilation', function(data){
             //console.log(data.spell.mana); //300
             //console.log(data.spell.price); //20000
         });
-
+```
 
 
 ### **creature()**
@@ -260,7 +260,7 @@ callback = function(data){}
             console.log("\n\n======TEST CREATURE========== ");
             console.log(data.exp); //6000
         });
-
+```
 
 ## Contributing
 
