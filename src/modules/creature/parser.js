@@ -23,17 +23,16 @@ module.exports = function(body){
 
       };
 
+    var expRegex = /([0-9]+)\ experience/g;
+    var hpRegex =  /([0-9]+)\ hitpoints/g;
 
-      var expRegex = /([0-9]+)\ experience/g;
-      var hpRegex =  /([0-9]+)\ hitpoints/g;
-
-
-     var experience = expRegex.exec(wrap("experience"));
-     var hitPoints = hpRegex.exec(wrap("hitpoints"));
-     self.data.description = wrap('');
-     self.data.exp = experience[1];
-     self.data.hitPoints = hitPoints[1];
-         });
+    var experience = expRegex.exec(wrap("experience"));
+    var hitPoints = hpRegex.exec(wrap("hitpoints"));
+     
+    self.data.description = wrap('');
+    self.data.exp = experience[1];
+    self.data.hitPoints = hitPoints[1];
+    });
 
   return CreatureParser;
 };
